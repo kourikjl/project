@@ -35,15 +35,21 @@ To read in the file use:
 ### Tidydata.txt is
 
 * 180 rows (observations) by 68 columns delimited by a space
-* A row summarizes the measurements for each combination of subject ID (participant) and activity (e.g. Walking) measurements.  
- * Variable names have () removed and have been converted to lowercase  
 
- * Tidydata has the following columns/headings:     
+* A row summarizes the measurements for each combination of subject ID (participant) and activity (e.g. Walking) measurements.
+
+* Variable names were reduced from 561 by searching for, and saving, variables that contained "mean()" or "std()".  Note that variables containing meanFreq(), or other variations beyond "mean()" and "std()", would not be selected or saved.
+
+* Variable names have been converted to lowercase  
+
+####Tidydata has the following columns/headings:     
 
 subject............... Subject ID range 1 - 30    
 activity............... Valid activities are WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING  
 
-The remaining variables contain the mean of all means or standard deviation.  Variable names indicate mean for mean and std for standard deviation.  
+The remaining variables contain the mean of all means or standard deviations reported. Variable names indicate mean for mean and std for standard deviation.   
+
+Measurement: The means and standard deviations were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 tbodyacc-mean-x     
 tbodyacc-mean-y  
@@ -111,3 +117,5 @@ fbodybodygyromag-mean
 fbodybodygyromag-std  
 fbodybodygyrojerkmag-mean  
 fbodybodygyrojerkmag-std  
+
+----- end of codebook.md -----

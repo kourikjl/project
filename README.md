@@ -22,7 +22,7 @@ Requirements
 *   Dataset installed in directory "UCI HAR Dataset"
 *   Change working directory to "UCI HAR Dataset" using `setwd("UCI_HAR_Dataset")`
 *   Download the git repo to "UCI HAR Dataset" directory
-*   Source() and run script run_analysis.R
+*   To run the script: source("run_analysis.R") 
   
 ## Processing
 The R script called run_analysis.R that does the following. 
@@ -40,14 +40,14 @@ Tidy data is a standard way of mapping the meaning of a dataset to its structure
 *    Each observation forms a row.
 *    Each type of observational unit forms a table.
 
-The output from the project is a tidy dataset meeting the above requirements.  It is a file with headers and 180 observations of 68 variables. Measurements are summarized by subject ID and activity and represent the mean of group of means and stand deviations.
+The output from the project is a tidy dataset meeting the above requirements.  It is a file with headers and 180 observations of 68 variables. Measurements are summarized by subject ID and activity and represent the mean of group of means and stand deviations.  More detailed information about the tidy dataset is available in the file `"codebook.md"`.
 
 To read in the file use: 
     `tidydata    <- read.table("tidydata.txt", header = TRUE)`
 
 ## Repository Contents
         README.md       (this file)
-        codebook.md     describing the data
+        codebook.md     describes the data
         run_analysis.R  script that does the processing
         tidydata.txt    tidy output from processing
         
@@ -65,4 +65,3 @@ Tidy Data Described:
 
 
   
-
